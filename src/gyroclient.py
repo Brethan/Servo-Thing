@@ -6,7 +6,7 @@ import json
 sense = SenseHat()
 sense.clear()
 
-j = open("../config.json", 'r')
+j = open("./config.json", 'r')
 data = json.loads(j.read())
 host = data["ip"]
 port = int(data["port"])
