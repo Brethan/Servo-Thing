@@ -1,12 +1,15 @@
 from sense_hat import SenseHat
 from time import sleep
 import socket
+import json
+
 sense = SenseHat()
 sense.clear()
 
-
-host = "your ip here"
-port = 42
+j = open("../config.json", 'r')
+data = json.loads(j.read())
+host = data["ip"]
+port = int(data["port"])
 
 client = socket.socket()
 client.connect((host, port))
