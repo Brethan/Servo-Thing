@@ -25,20 +25,20 @@ def map(val, old_bottom, old_top, new_bottom, new_top):
 
 '''
 Diagram of how roll is mapped by the sense hat:
-				  360 | 0     
-   CCW_BOUND + x	  |	     CW_BOUND - x
-			    \	  |     /
-				 \	  |	   /
-				  \	  |	  /
+                  360 | 0     
+   CCW_BOUND + x      |      CW_BOUND - x
+                \     |     /
+                 \    |    /
+                  \   |   /
 CCW_BOUND--------[Sense Hat]--------CW_BOUND
 
 The goal is to remap these angles such that
 they fit this form:
-		        	  90
-           0 + y	  |	 	 180 - y
-        		\	  |     /
-        		 \    |    /
-        		  \   |	  /
+                      90
+           0 + y      |      180 - y
+                \     |     /
+                 \    |    /
+        	  \   |	  /
 0----------------[Sense Hat]-------------180
 
 So that turning the hat in the CCW direction won't
